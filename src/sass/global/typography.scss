@@ -1,0 +1,29 @@
+html, body {
+	background: $BgColor none no-repeat left top;
+	margin: 0;
+	font: 300 100%/130% $font;
+	color: $fontColor;
+	text-shadow: 1px 1px 0 $fontShadowColorLight;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+	font-weight: 400;
+}
+h1, h2 {
+	font: 400 1em/1.2em $fontHeading;
+	display: inline-block;
+	width: 100%;
+	margin: 0 0 0.5em 0;
+}
+h1 {
+	text-shadow: 2px 2px 0 $fontShadowColorDark;
+}
+h2 {
+	text-shadow: 1px 1px 0 $fontShadowColorDark;
+}
+p {
+	font: .3em/1.5em;
+	font-weight: 300;
+	margin: 0 0 1em 0;
+}

@@ -1,0 +1,82 @@
+/*.portfolio .horizontalWrapper {
+	width: 640%;
+}*/
+/*.portfolio article.page {
+	width: 12.5%;
+}*/
+
+.portfolio article.page {
+/*	position: relative;
+	
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;*/
+}
+.portfolio .projectImage {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+	
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+.projectImage h1 {
+	font: 100 1em/1em Oswald, sans-serif;
+	text-transform: uppercase;
+/*	padding: 1.5em 1.5em .1em 1.5em;*/
+	padding: .1em;
+	
+	color: $BgColor;
+
+	position: absolute;
+	bottom: 0;
+	line-height: 1em;
+	white-space: nowrap;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.first .descriptionContainer {
+	padding-left: 6em;
+}
+.descriptionContainer {
+	background: rgba(0, 0, 0, .8);
+	padding: 4em 4em 4em 4em;
+	
+	height: 50%;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.last .descriptionContainer {
+	padding-right: 6em;
+}
+.description {
+	font: 300 0.3em/1.5em "Roboto";
+	color: $BgColor;
+	text-shadow: none;
+	height: 100%;
+
+	-webkit-column-width: 250px;
+	-moz-column-width: 250px;
+	-ms-column-width: 250px;
+	column-width: 250px;
+	
+	-webkit-column-gap: 2em;
+	-moz-column-gap: 2em;
+	-ms-column-gap: 2em;
+	column-gap: 2em;
+	
+	-webkit-column-fill: auto;
+	-moz-column-fill: auto;
+	-ms-column-fill: auto;
+	column-fill: auto;
+}

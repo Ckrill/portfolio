@@ -1,0 +1,117 @@
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    display: inline-block;
+    padding: 0.4em 0;
+}
+p a,
+li a {
+    position: relative;
+    
+    &:after {
+        content: "";
+        position: absolute;
+        border-bottom: 1px solid $fontColor;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        
+        transform: scaleX(0);
+        transform-origin: 0;
+        transition: transform .3s cubic-bezier(.23,1,.32,1);
+    }
+    
+    &:hover:after {
+        transform: scaleX(1);
+    }
+}
+strong {
+    font-weight: 400;
+}
+.clear {
+	clear: both;
+}
+.verticalWrapper {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+section.page {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	overflow-x: visible;
+}
+.horizontalWrapper {
+    width: 100%;
+	height: 100%;
+    
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+article.page {
+    width: 100%;
+	float: left;
+    
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.textbox {
+	background: $BgColor none no-repeat left top;
+    padding: 5em;
+    min-height: 100vh;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+    
+    @include media(tabletV) {
+        padding: 3em;
+    }
+    
+    .iOS &.w50 {
+        min-height: 100%;
+    }
+
+    &.w40 {
+        width: 40%;
+        position: relative;
+    }
+    &.w50 {
+        width: 50%;
+        position: relative;
+    }
+    &.w60 {
+        width: 60%;
+        position: relative;
+    }
+    &.w100 {
+        width: 100%;
+
+        p {
+            line-height: 2em;
+            
+            -webkit-column-width: 300px;
+            -moz-column-width: 300px;
+            column-width: 300px;
+
+            -webkit-column-gap: 2em;
+            -moz-column-gap: 2em;
+            column-gap: 2em;
+        }
+    }
+}
