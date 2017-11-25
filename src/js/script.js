@@ -10,10 +10,7 @@
 
 // Settings
 
-var splashDisappear = 10000,
-    splash = 1,
-
-    numberOfVerticalPages = $(".verticalWrapper section").length,
+var numberOfVerticalPages = $(".verticalWrapper section").length,
     numberOfProjects = $(".portfolio .page").length, // Defining number of portfolio
     numberOfReferences = $(".references .page").length, // Defining number of references
 
@@ -22,21 +19,6 @@ var splashDisappear = 10000,
     pageMargin = (1 - pageWidth) / 2; // Both for .portfolio and .references
 
 // Settings - END
-
-
-
-// Splash screen
-
-function showSplash() {
-        $("#splash").css("visibility", "visible");
-        splash = 1;
-}
-function hideSplash() {
-	$("#splash").css("visibility", "hidden");
-	splash = 0;
-}
-
-// Splash screen - END
 
 
 
@@ -164,17 +146,6 @@ $(document).ready(function () {
 
 
 
-// Splash
-
-	window.setTimeout(hideSplash, splashDisappear);
-	$(window).click(function () {
-		hideSplash();
-	});
-
-// Splash - END
-
-
-
 // Fit Text
 
 	$("h1").fitText(1.3, { minFontSize: '26px', maxFontSize: '60px' });
@@ -196,16 +167,6 @@ $(document).ready(function () {
     
 // if iOS, add class - END
 
-
-
-// Show splash if every page fits in one window size
-    
-    if ($(document).height() <= $(window).height() * numberOfVerticalPages && $("html").hasClass("no-touch")) {
-        showSplash();
-    }
-	
-// Show splash if every page fits in one window size - END
-
     
     
     $(".toggleExperience").click(function () {
@@ -218,7 +179,7 @@ $(document).ready(function () {
                 $('.priorityLow').slideToggle().dequeue();
             });
         }
-	});
+		});
 
 });
 
@@ -231,28 +192,20 @@ $(document).ready(function () {
 $(document).keyup(function (e) {
 	if (e.which === 37) { // Left
         navigateKey("horizontal", -1);
-        hideSplash();
 	}
 	if (e.which === 39) { // Right
 		navigateKey("horizontal", +1);
-		hideSplash();
 	}
 	if (e.which === 38) { // Up
 		if ($(document).height() <= $(window).height() * numberOfVerticalPages) { // No scroll if window is too small
 			navigateKey("vertical", -1);
-			hideSplash();
 		}
 	}
 	if (e.which === 40) { // Down
 		if ($(document).height() <= $(window).height() * numberOfVerticalPages) { // No scroll if window is too small
 			navigateKey("vertical", +1);
-			hideSplash();
 		}
 	}
-//	if(e.which == 13) { // Enter
-//        showSplash();
-//        window.setTimeout(hideSplash, splashDisappear);
-//	}
 });
 
 // Key bindings - END
