@@ -1,7 +1,4 @@
 .resume {
-	ul {
-		margin-bottom: 0;
-	}
 	article.page {
 		@include media(tabletH) {
 			display: block;
@@ -49,62 +46,51 @@
 			height: 15em;
 		}
 	}
-	.hidden {
-//		transform: scaleY(0) !important;
-//		transform-origin: top;
-		opacity: 0 !important;
-	}
-	.experience {
-//        .priorityLow {
-//            display: block;
-//            transition: all 1.3s;
-//            height: 0;
-//            padding: 0;
-//            overflow: hidden;
-//        }
-		&.priorityLowVisible {
-			.priorityLow {
-				display: block;
-//                height: auto;
-//                padding: 0.4em 0;
-			}
-		}
-		li {
-			display: block;
+}
 
-			&.priorityLow {
-				display: none;
-				opacity: 0;
-				transition: opacity .3s;
-			}
+.hidden {
+	opacity: 0;
+}
+
+.list {
+	margin-bottom: 0;
+
+	&__item {
+		display: block;
+
+		&--low-priority {
+			display: none;
+			transition: opacity $fast $curve;
 		}
 	}
-	.toggleExperience {
-		cursor: pointer;
-		font-size: 0.75em;
-		font-weight: 500;
-		padding: 10px 10px 10px 0;
-		display: inline-block;
+	
+	&--show-all {
+		& + .toggle-list-items::before {
+			transform: rotate(45deg);
+		}
+		& + .toggle-list-items::after {
+			content: "less";
+		}
+		.list__item--low-priority {
+	        display: block;
+		}
 	}
-	.toggleExperience:before {
+}
+
+.toggle-list-items {
+	cursor: pointer;
+	font-size: 0.75em;
+	font-weight: 500;
+	padding: 10px 10px 10px 0;
+	display: inline-block;
+	
+	&::before {
 		content: "+";
 		display: inline-block;
 		margin-right: 4px;
-		transition: transform .3s;
 	}
-	.toggleExperience:after {
+	
+	&::after {
 		content: "more";
-	}
-	.priorityLowVisible {
-		& + .toggleExperience:before {
-			transform: rotate(45deg);
-		}
-		& + .toggleExperience:after {
-			content: "less";
-		}
-		li.priorityLow {
-//            display: block;
-			opacity: 1;
-		}
 	}
 }
