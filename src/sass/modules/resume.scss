@@ -1,52 +1,60 @@
 .resume {
-    ul {
-        margin-bottom: 0;
-    }
-    article.page {
-        @include media(tabletH) {
-            display: block;
-        }
-    }
-    .textbox.w50 {
-        @include media(tabletH) {
-            width: 100%;
-            min-height: auto; /* I am not sure why this is necessarily, need to dfind another fix */
-        }
-    }
-    .textbox.left {
-        -webkit-order: 0;
-        order: 0;
-        
-        display: -webkit-box;
-        display: -moz-box;
-        display: -webkit-flex;
-        display: flex;
+	ul {
+		margin-bottom: 0;
+	}
+	article.page {
+		@include media(tabletH) {
+			display: block;
+		}
+	}
+	.textbox.w50 {
+		@include media(tabletH) {
+			width: 100%;
+			min-height: auto; /* I am not sure why this is necessarily, need to find another fix */
+		}
+	}
+	.textbox.left {
+		-webkit-order: 0;
+		order: 0;
 
-        -webkit-box-orient: vertical;
-        -webkit-flex-direction: column;
-        flex-direction: column;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -webkit-flex;
+		display: flex;
 
-        -webkit-justify-content: center;
-        justify-content: center;
-    }
-    .textbox.right.profileImg {
-        background: url(../img/DSC_3306.jpg) no-repeat 80% 40% / cover;
-        -webkit-order: 1;
-        order: 1;
+		-webkit-box-orient: vertical;
+		-webkit-flex-direction: column;
+		flex-direction: column;
 
-        @include media(tabletH) {
-            height: 30em;
-            min-height: auto;
-            max-height: 60vh;
-        }
-        @include media(mobileH) {
-            height: 20em;
-        }
-        @include media(mobileV) {
-            height: 15em;
-        }
-    }
-    .experience {
+		-webkit-justify-content: center;
+		justify-content: center;
+
+		align-items: left;
+	}
+	.textbox.right.profileImg {
+		background: url(../img/DSC_3306.jpg) no-repeat 80% 40% / cover;
+
+		-webkit-order: 1;
+		order: 1;
+
+		@include media(tabletH) {
+			height: 30em;
+			min-height: auto;
+			max-height: 60vh;
+		}
+		@include media(mobileH) {
+			height: 20em;
+		}
+		@include media(mobileV) {
+			height: 15em;
+		}
+	}
+	.hidden {
+//		transform: scaleY(0) !important;
+//		transform-origin: top;
+		opacity: 0 !important;
+	}
+	.experience {
 //        .priorityLow {
 //            display: block;
 //            transition: all 1.3s;
@@ -54,49 +62,49 @@
 //            padding: 0;
 //            overflow: hidden;
 //        }
-//        &.priorityLowVisible {
-//            .priorityLow {
-//                display: block;
+		&.priorityLowVisible {
+			.priorityLow {
+				display: block;
 //                height: auto;
 //                padding: 0.4em 0;
-//            }
-//        }
-        li {
-            display: block;
-        
-            &.priorityLow {
-//                display:  none;
-                opacity: 0;
-                transition: opacity .1s ease-out;
-            }
-        }
-    }
-    .toggleExperience {
-        cursor: pointer;
-        font-size: 0.75em;
-        font-weight: 500;
-        padding: 10px 10px 10px 0;
-        display: inline-block;
-    }
-    .toggleExperience:before {
-        content: "+";
-        display: inline-block;
-        margin-right: 4px;
-        transition: transform .3s;
-    }
-    .toggleExperience:after {
-        content: "more";
-    }
-    .priorityLowVisible {
-        & + .toggleExperience:before {
-            transform: rotate(45deg);
-        }
-        & + .toggleExperience:after {
-            content: "less";
-        }
-        li.priorityLow {
+			}
+		}
+		li {
+			display: block;
+
+			&.priorityLow {
+				display: none;
+				opacity: 0;
+				transition: opacity .3s;
+			}
+		}
+	}
+	.toggleExperience {
+		cursor: pointer;
+		font-size: 0.75em;
+		font-weight: 500;
+		padding: 10px 10px 10px 0;
+		display: inline-block;
+	}
+	.toggleExperience:before {
+		content: "+";
+		display: inline-block;
+		margin-right: 4px;
+		transition: transform .3s;
+	}
+	.toggleExperience:after {
+		content: "more";
+	}
+	.priorityLowVisible {
+		& + .toggleExperience:before {
+			transform: rotate(45deg);
+		}
+		& + .toggleExperience:after {
+			content: "less";
+		}
+		li.priorityLow {
 //            display: block;
-            opacity: 1;
-        }
-    }
+			opacity: 1;
+		}
+	}
 }

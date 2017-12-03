@@ -99,17 +99,5 @@ article.page {
     }
     &.w100 {
         width: 100%;
-
-        p {
-            line-height: 2em;
-            
-            -webkit-column-width: 300px;
-            -moz-column-width: 300px;
-            column-width: 300px;
-
-            -webkit-column-gap: 2em;
-            -moz-column-gap: 2em;
-            column-gap: 2em;
-        }
     }
 }

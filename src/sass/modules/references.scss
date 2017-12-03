@@ -28,7 +28,7 @@
         }
     }
     
-    @media screen and (max-width: 768px) {
+    @include media(tabletH) {
         display: none;
     }
 }
