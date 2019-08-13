@@ -12,7 +12,6 @@
     "grunt-open": "^0.2.4",
     "grunt-parallel": "^0.5.1",
     "grunt-sass": "^3.0.2",
-    "handlebars": "^4.1.2",
     "node-sass": "^4.12.0"
   }
 }
