@@ -1,96 +1,105 @@
 .resume {
-	article.page {
-		@include media(tabletH) {
-			display: block;
-		}
-	}
-	.textbox.w50 {
-		@include media(tabletH) {
-			width: 100%;
-			min-height: auto; /* I am not sure why this is necessarily, need to find another fix */
-		}
-	}
-	.textbox.left {
-		-webkit-order: 0;
-		order: 0;
+  article.page {
+    @include media(tabletH) {
+      display: block;
+    }
+  }
+  .textbox.w50 {
+    @include media(tabletH) {
+      width: 100%;
+      min-height: auto; /* I am not sure why this is necessarily, need to find another fix */
+    }
+  }
+  .textbox.left {
+    -webkit-order: 0;
+    order: 0;
 
-		display: -webkit-box;
-		display: -moz-box;
-		display: -webkit-flex;
-		display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: flex;
 
-		-webkit-box-orient: vertical;
-		-webkit-flex-direction: column;
-		flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    flex-direction: column;
 
-		-webkit-justify-content: center;
-		justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
 
-		align-items: left;
-	}
-	.textbox.right.profileImg {
-		background: url(../img/DSC_3306.jpg) no-repeat 80% 40% / cover;
+    align-items: left;
+  }
+  .textbox.right.profileImg {
+    // background: url(../img/profile.jpg) no-repeat 80% 40% / cover;
+    padding: 0;
 
-		-webkit-order: 1;
-		order: 1;
+    -webkit-order: 1;
+    order: 1;
 
-		@include media(tabletH) {
-			height: 30em;
-			min-height: auto;
-			max-height: 60vh;
-		}
-		@include media(mobileH) {
-			height: 20em;
-		}
-		@include media(mobileV) {
-			height: 15em;
-		}
-	}
+    @include media(tabletH) {
+      height: 30em;
+      min-height: auto;
+      max-height: 60vh;
+    }
+    @include media(mobileH) {
+      height: 20em;
+    }
+    @include media(mobileV) {
+      height: 15em;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: 80% 40%;
+    }
+  }
 }
 
 .hidden {
-	opacity: 0;
+  opacity: 0;
 }
 
 .list {
-	margin-bottom: 0;
+  margin-bottom: 0;
 
-	&__item {
-		display: block;
+  &__item {
+    display: block;
 
-		&--low-priority {
-			display: none;
-			transition: opacity $fast $curve;
-		}
-	}
-	
-	&--show-all {
-		& + .toggle-list-items::before {
-			transform: rotate(45deg);
-		}
-		& + .toggle-list-items::after {
-			content: "less";
-		}
-		.list__item--low-priority {
-	        display: block;
-		}
-	}
+    &--low-priority {
+      display: none;
+      transition: opacity $fast $curve;
+    }
+  }
+
+  &--show-all {
+    & + .toggle-list-items::before {
+      transform: rotate(45deg);
+    }
+    & + .toggle-list-items::after {
+      content: "less";
+    }
+    .list__item--low-priority {
+      display: block;
+    }
+  }
 }
 
 .toggle-list-items {
-	cursor: pointer;
-	font-size: 0.75em;
-	font-weight: 500;
-	padding: 10px 10px 10px 0;
-	display: inline-block;
-	
-	&::before {
-		content: "+";
-		display: inline-block;
-		margin-right: 4px;
-	}
-	
-	&::after {
-		content: "more";
-	}
+  cursor: pointer;
+  font-size: 0.75em;
+  font-weight: 500;
+  padding: 10px 10px 10px 0;
+  display: inline-block;
+
+  &::before {
+    content: "+";
+    display: inline-block;
+    margin-right: 4px;
+  }
+
+  &::after {
+    content: "more";
+  }
 }

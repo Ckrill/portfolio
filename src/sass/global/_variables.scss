@@ -1,26 +1,29 @@
 @font-face {
-    font-family: oswald;
-    src: url(../font/oswald-regular.woff2);
-    font-weight: 400;
+  font-family: oswald;
+  font-display: swap;
+  src: url(../font/oswald-regular.woff2);
+  font-weight: 400;
 }
 
 @font-face {
-    font-family: roboto;
-    src: url(../font/roboto-light.woff2);
-    font-weight: 300;
+  font-family: roboto;
+  font-display: swap;
+  src: url(../font/roboto-light.woff2);
+  font-weight: 300;
 }
 
 @font-face {
-    font-family: roboto;
-    src: url(../font/roboto-regular.woff2);
-    font-weight: 400;
+  font-family: roboto;
+  font-display: swap;
+  src: url(../font/roboto-regular.woff2);
+  font-weight: 400;
 }
 
 // Colors
 $BgColor: #f5f5f5;
 $fontColor: #424242; // Basic font color
-$fontShadowColorLight: rgba(0, 0, 0, .1);
-$fontShadowColorDark: rgba(0, 0, 0, .2);
+$fontShadowColorLight: rgba(0, 0, 0, 0.1);
+$fontShadowColorDark: rgba(0, 0, 0, 0.2);
 
 //Font
 $fontStack: "roboto", Arial, Helvetica, Geneva, sans-serif;
@@ -28,9 +31,9 @@ $fontStackHeading: "oswald", Arial, Helvetica, Geneva, sans-serif;
 $base-font-size: 16px;
 
 // Animations
-$fast: .3s;
-$slow: .5s;
-$curve: cubic-bezier(.23,1,.32,1);
+$fast: 0.3s;
+$slow: 0.5s;
+$curve: cubic-bezier(0.23, 1, 0.32, 1);
 
 //Media Queries
 $desktop: 1200px;

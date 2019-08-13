@@ -1,17 +1,18 @@
 {
-  "name": "Portfolio",
+  "name": "portfolio",
   "version": "0.1.0",
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-copy": "^0.7.0",
-    "grunt-contrib-cssmin": "^0.10.0",
-    "grunt-contrib-imagemin": "1.0.0",
-    "grunt-contrib-uglify": "~0.5.0",
-    "grunt-contrib-watch": "^0.6.1",
+    "grunt": "^1.0.4",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-imagemin": "^3.1.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0",
     "grunt-express": "^1.4.1",
-    "grunt-open": "^0.2.3",
+    "grunt-open": "^0.2.4",
     "grunt-parallel": "^0.5.1",
-    "grunt-sass": "^1.2.1",
-    "handlebars": "^4.0.6"
+    "grunt-sass": "^3.0.2",
+    "handlebars": "^4.1.2",
+    "node-sass": "^4.12.0"
   }
 }
