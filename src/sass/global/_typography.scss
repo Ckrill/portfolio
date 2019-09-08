@@ -1,88 +1,83 @@
-html, body {
-	background: $BgColor none no-repeat left top;
-	margin: 0;
-	font-weight: 300;
-	font-size:  100%;
-	line-height: 1.5;
-	font-family: $fontStack;
-	color: $fontColor;
-	text-shadow: 1px 1px 0 $fontShadowColorLight;
+html,
+body {
+  background: $BgColor none no-repeat left top;
+  margin: 0;
+  font-weight: 300;
+  font-size: 100%;
+  line-height: 1.5;
+  font-family: $fontStack;
+  color: $fontColor;
+  text-shadow: 1px 1px 0 $fontShadowColorLight;
 }
 a {
-	color: inherit;
-	text-decoration: none;
-	font-weight: 400;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 400;
 }
-h1, h2 {
-	font-family: $fontStackHeading;
-	font-weight: 400;
-	display: inline-block;
-	width: 100%;
-	margin: 0 0 0.5em 0;
+h1,
+h2 {
+  font-family: $fontStackHeading;
+  font-weight: 400;
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 0.5em 0;
 }
 h1 {
-	font-size: rem(60px);
-	line-height: 1.2em;
-	text-shadow: 2px 2px 0 $fontShadowColorDark;
+  font-size: rem(60px);
+  line-height: 1.2em;
+  text-shadow: 2px 2px 0 $fontShadowColorDark;
 }
 h2 {
-	font-size: rem(40px);
-	line-height: 1.2em;
-	text-shadow: 1px 1px 0 $fontShadowColorDark;
+  font-size: rem(40px);
+  line-height: 1.2em;
+  text-shadow: 1px 1px 0 $fontShadowColorDark;
 }
 p {
-	margin: 0 0 1em 0;
+  margin: 0 0 1em 0;
 }
 .experience {
-	font-size: rem(16px);
+  font-size: rem(16px);
 }
 .textbox {
-	
-	&.w100 p {
-		font-size: rem(14px);
-		line-height: 2em;
-		
-		-webkit-column-width: 300px;
-		-moz-column-width: 300px;
-		column-width: 300px;
+  &.w100 p {
+    font-size: rem(14px);
+    line-height: 2em;
 
-		-webkit-column-gap: 2em;
-		-moz-column-gap: 2em;
-		column-gap: 2em;
-	}
+    column-width: 300px;
+    column-gap: 2em;
+  }
 }
 
 @include media(tabletH) {
-	h1 {
-		font-size: rem(40px);
-	}
-	
-	h2 {
-		font-size: rem(26px);
-	}
-	
-	.experience {
-		font-size: rem(14px);
-	}
-	
-	.textbox {
-	
-		&.w100 p {
-			font-size: rem(12px);
-		}
-	}
+  h1 {
+    font-size: rem(40px);
+  }
+
+  h2 {
+    font-size: rem(26px);
+  }
+
+  .experience {
+    font-size: rem(14px);
+  }
+
+  .textbox {
+    &.w100 p {
+      font-size: rem(12px);
+    }
+  }
 }
 
 @include media(mobileH) {
-	h1 {
-		font-size: rem(26px);
-	}
-	
-	h2 {
-		font-size: rem(18px);
-	}
-	
-	.experience {
-		font-size: rem(12px);
-	}
+  h1 {
+    font-size: rem(26px);
+  }
+
+  h2 {
+    font-size: rem(18px);
+  }
+
+  .experience {
+    font-size: rem(12px);
+  }
 }

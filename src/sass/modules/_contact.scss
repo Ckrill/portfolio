@@ -13,17 +13,8 @@
 
   .textbox.w60 {
     padding-left: 0;
-
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
     display: flex;
-
-    -webkit-box-orient: vertical;
-    -webkit-flex-direction: column;
     flex-direction: column;
-
-    -webkit-justify-content: center;
     justify-content: center;
   }
 

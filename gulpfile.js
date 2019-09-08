@@ -3,13 +3,19 @@
 // Idea: Sorting Scss properties...
 
 const { src, dest, watch, series, parallel } = require("gulp");
+// Markup
 const htmlmin = require("gulp-htmlmin");
+// Styles
 const sass = require("gulp-sass");
-const browserSync = require("browser-sync").create();
+sass.compiler = require("node-sass");
+const autoprefixer = require("gulp-autoprefixer");
+const cleanCSS = require("gulp-clean-css");
+// Scripts
 const uglify = require("gulp-uglify");
+// Other
+const browserSync = require("browser-sync").create();
 const del = require("del");
 const rename = require("gulp-rename");
-sass.compiler = require("node-sass");
 
 const paths = {
   generic: { src: "./src", dest: "./dist" },
@@ -37,7 +43,10 @@ const markup = () =>
 // TODO: Make use of prefixer (postCSS?)
 const styles = () =>
   src(paths.styles.src)
-    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+    .pipe(sass().on("error", sass.logError))
+    .pipe(autoprefixer())
+    .pipe(dest(paths.styles.dest))
+    .pipe(cleanCSS())
     .pipe(rename({ extname: ".min.css" }))
     .pipe(dest(paths.styles.dest))
     .pipe(browserSync.stream());

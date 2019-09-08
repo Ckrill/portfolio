@@ -30,12 +30,9 @@
 
   .textbox {
     min-height: 75vh;
-
-    -webkit-align-items: center;
     align-items: center;
 
     @include media(tabletH) {
-      -webkit-align-items: flex-start;
       align-items: flex-start;
     }
 
@@ -46,16 +43,8 @@
     }
 
     &.w50 {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -webkit-flex;
       display: flex;
-
-      -webkit-box-orient: vertical;
-      -webkit-flex-direction: column;
       flex-direction: column;
-
-      -webkit-justify-content: flex-end;
       justify-content: flex-end;
 
       @include media(tabletV) {

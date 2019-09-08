@@ -11,28 +11,15 @@
     }
   }
   .textbox.left {
-    -webkit-order: 0;
     order: 0;
-
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
     display: flex;
-
-    -webkit-box-orient: vertical;
-    -webkit-flex-direction: column;
     flex-direction: column;
-
-    -webkit-justify-content: center;
     justify-content: center;
-
     align-items: left;
   }
   .textbox.right.profileImg {
     // background: url(../img/profile.jpg) no-repeat 80% 40% / cover;
     padding: 0;
-
-    -webkit-order: 1;
     order: 1;
 
     @include media(tabletH) {
