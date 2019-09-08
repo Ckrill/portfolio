@@ -1,11 +1,3 @@
-// JS lint
-
-/*jslint browser: true*/
-/*global document, window, setTimeout*/
-/*jslint plusplus: true */
-
-// JS lint - END
-
 // Require dependencies for this module
 
 var isCollection = function(el) {
@@ -26,6 +18,8 @@ var isCollection = function(el) {
       callback(el);
     }
   };
+
+// Functions
 
 var functions = {
   addEventListener: function(el, eventNames, callback, parent) {
@@ -54,12 +48,6 @@ var functions = {
     }
 
     return el.classList.contains(className);
-  },
-
-  setStyle: function(el, property, styleValue) {
-    callEach(el, function(e) {
-      e.style[property] = styleValue;
-    });
   },
 
   select: function(selector, parent) {
