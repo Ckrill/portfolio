@@ -3,6 +3,7 @@
 // Idea: Sorting Scss properties...
 
 const { src, dest, watch, series, parallel } = require("gulp");
+const htmlmin = require("gulp-htmlmin");
 const sass = require("gulp-sass");
 const browserSync = require("browser-sync").create();
 const uglify = require("gulp-uglify");
@@ -26,7 +27,10 @@ exports.clean.description = "Delete dist/ folder";
 // MARKUP
 // Minify markup and place in ./dist/
 // TODO: Make minify optional
-const markup = () => src(paths.markup.src).pipe(dest(paths.markup.dest));
+const markup = () =>
+  src(paths.markup.src)
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(dest(paths.markup.dest));
 
 // STYLES
 // Transpile Sass to CSS and minify and place in ./dist/css
