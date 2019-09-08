@@ -2,16 +2,28 @@
   "name": "portfolio",
   "version": "0.1.0",
   "devDependencies": {
-    "grunt": "^1.0.4",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^3.0.0",
-    "grunt-contrib-imagemin": "^3.1.0",
-    "grunt-contrib-uglify": "^4.0.1",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-express": "^1.4.1",
-    "grunt-open": "^0.2.4",
-    "grunt-parallel": "^0.5.1",
-    "grunt-sass": "^3.0.2",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
     "node-sass": "^4.12.0"
-  }
+  },
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ckrill/portfolio.git"
+  },
+  "author": "Chris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ckrill/portfolio/issues"
+  },
+  "homepage": "https://github.com/Ckrill/portfolio#readme",
+  "description": "Personal portfolio"
 }
