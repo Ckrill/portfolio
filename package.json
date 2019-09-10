@@ -16,6 +16,32 @@
   },
   "homepage": "https://github.com/Ckrill/portfolio#readme",
   "description": "Personal portfolio",
+  "devBuild": true,
+  "paths": {
+    "generic": {
+      "src": "./src",
+      "dest": "./dist"
+    },
+    "markup": {
+      "src": "./src/*.html",
+      "dest": "./dist"
+    },
+    "styles": {
+      "src": "./src/sass/**/*.scss",
+      "dest": "./dist/css"
+    },
+    "scripts": {
+      "src": "./src/js/**/*.js",
+      "dest": "./dist/js"
+    },
+    "assets": {
+      "src": [
+        "./src/font/*.*",
+        "./src/img/**/*.*"
+      ],
+      "dest": "./dist"
+    }
+  },
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.26.7",
@@ -24,6 +50,7 @@
     "gulp-autoprefixer": "^7.0.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
