@@ -1,83 +1,83 @@
 html,
 body {
-  background: $BgColor none no-repeat left top;
   margin: 0;
-  font-weight: 300;
-  font-size: 100%;
-  line-height: 1.5;
-  font-family: $fontStack;
+  background: $BgColor none no-repeat left top;
   color: $fontColor;
   text-shadow: 1px 1px 0 $fontShadowColorLight;
+  font-weight: 300;
+  font-size: 100%;
+  font-family: $fontStack;
+  line-height: 1.5;
 }
-a {
-  color: inherit;
-  text-decoration: none;
-  font-weight: 400;
-}
-h1,
-h2 {
-  font-family: $fontStackHeading;
-  font-weight: 400;
+
+.heading,
+.subheading {
   display: inline-block;
-  width: 100%;
   margin: 0 0 0.5em 0;
+  width: 100%;
+  font-weight: 400;
+  font-family: $fontStackHeading;
 }
-h1 {
+
+.heading {
+  text-shadow: 2px 2px 0 $fontShadowColorDark;
   font-size: rem(60px);
   line-height: 1.2em;
-  text-shadow: 2px 2px 0 $fontShadowColorDark;
 }
-h2 {
+
+.subheading {
+  text-shadow: 1px 1px 0 $fontShadowColorDark;
   font-size: rem(40px);
   line-height: 1.2em;
-  text-shadow: 1px 1px 0 $fontShadowColorDark;
 }
+
 p {
   margin: 0 0 1em 0;
 }
-.experience {
-  font-size: rem(16px);
-}
-.textbox {
-  &.w100 p {
-    font-size: rem(14px);
-    line-height: 2em;
 
-    column-width: 300px;
-    column-gap: 2em;
+strong {
+  font-weight: 400;
+}
+
+.link {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 400;
+
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid $fontColor;
+    content: "";
+    transition: transform $fast $curve;
+    transform: scaleX(0);
+    transform-origin: 0;
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
   }
 }
 
 @include media(tabletH) {
-  h1 {
+  .heading {
     font-size: rem(40px);
   }
 
-  h2 {
+  .subheading {
     font-size: rem(26px);
-  }
-
-  .experience {
-    font-size: rem(14px);
-  }
-
-  .textbox {
-    &.w100 p {
-      font-size: rem(12px);
-    }
   }
 }
 
 @include media(mobileH) {
-  h1 {
+  .heading {
     font-size: rem(26px);
   }
 
-  h2 {
+  .subheading {
     font-size: rem(18px);
-  }
-
-  .experience {
-    font-size: rem(12px);
   }
 }

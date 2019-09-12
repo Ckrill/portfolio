@@ -7,18 +7,24 @@
 //-------------------------------------------
 
 @mixin media($point) {
-    @if $point == tabletH {
-        @media screen and (max-width: 1024px)  { @content; }
+  @if $point == tabletH {
+    @media screen and (max-width: 1024px) {
+      @content;
     }
-    @if $point == tabletV {
-        @media screen and (max-width: 768px)  { @content; }
+  }
+  @if $point == tabletV {
+    @media screen and (max-width: 768px) {
+      @content;
     }
-    @else if $point == mobileH {
-        @media screen and (max-width: 568px)  { @content; }
+  } @else if $point == mobileH {
+    @media screen and (max-width: 568px) {
+      @content;
     }
-    @else if $point == mobileV {
-        @media screen and (max-width: 400px)  { @content; }
+  } @else if $point == mobileV {
+    @media screen and (max-width: 400px) {
+      @content;
     }
+  }
 }
 
 //html, body {
@@ -28,68 +34,3 @@
 //   @include media(mobileH) { background: yellow !important; }
 //   @include media(mobileV) { background: purple !important; }
 // }
-
-
-/* iPads (portrait and landscape) ----------- */
-
-
-//@media only screen and (max-width: 960px), (orientation: portrait) {
-//	section.page.portfolio/*,
-//	section.page.references,
-//	section.page.contact*/ {
-///*		display: none;*/
-//	}
-//	section.page {
-//		height: auto;
-//		min-height: 100%;
-//	}
-//	section.page.contact {
-//		height: 100%;
-//	}
-///*	article.page {
-//		height: auto;
-//		min-height: 100%;
-//	}*/
-//	
-//	/* Position picture at top */
-//
-//	.resume article.page {
-//		height: 100%;
-//	}
-//	
-//	.resume .textbox.w50 {
-//		width: 100%;
-//	}
-//	.resume .textbox.w50.left {
-//		height: auto;
-///*		margin: 500px 0 0 auto;*/
-//	}
-//	.resume .textbox.right.profileImg {
-//		display: inline;
-//		height: 20em;
-//		height: 40vh;
-///*		margin: 500px 0 0 auto;*/
-//	}
-//	.iOS .resume .textbox.w50.right {
-//		height: 20em;
-//	}
-//	.resume .loadingImageContainer {
-//		display: inline;
-//		width: 100% !important;
-//	}
-//	.iOS .textbox.w50.left,
-//	.iOS .textbox.w50.right {
-//		min-height: 100%;
-//	}
-//	
-//	/* Position picture at top - END */
-///*	h1 {
-//		color: gold !important;
-//	}*/
-//}
-
-/*@media only screen and (max-width: 480px) and (orientation:portrait) {
-	.textbox.w50.right {
-		margin: 200px 0 0 auto;
-	}
-}*/

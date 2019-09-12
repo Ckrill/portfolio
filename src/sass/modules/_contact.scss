@@ -1,52 +1,81 @@
 .contact {
-  .contactImg {
-    position: absolute;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
 
-    top: 0;
-    right: 5vmin;
-    bottom: 0;
-    margin: auto;
-
-    height: 20vmin;
-    width: 20vmin;
-  }
-
-  .textbox.w60 {
-    padding-left: 0;
-    display: flex;
+  @include media(mobileH) {
     flex-direction: column;
     justify-content: center;
   }
 
-  p {
-    margin: 0;
+  &__image-container {
+    position: relative;
+    width: 40%;
+
+    @include media(mobileH) {
+      box-sizing: content-box;
+      padding-bottom: 2em;
+      min-height: initial;
+      width: 100%;
+      height: 20vmin;
+      text-align: center;
+    }
   }
 
-  @include media(mobileH) {
-    article.page {
-      flex-direction: column;
-      justify-content: center;
-      min-height: 100vh;
-    }
-    .textbox.w40,
-    .textbox.w60 {
-      width: 100%;
-      min-height: initial;
-    }
-    .textbox.w40 {
-      height: 20vmin;
-      box-sizing: content-box;
-      padding: 0 0 2em 0;
-      text-align: center;
-    }
-    .contactImg {
+  &__image {
+    position: absolute;
+    top: 0;
+    right: 5vmin;
+    bottom: 0;
+    display: block;
+    margin: auto;
+    width: 20vmin;
+    height: 20vmin;
+
+    @include media(mobileH) {
+      position: relative;
       right: 0;
       left: 0;
-      position: relative;
     }
-    .textbox.w60 {
-      padding: 0em 3em;
+  }
+
+  &__text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0;
+    width: 60%;
+
+    @include media(mobileH) {
+      box-sizing: border-box;
+      padding-right: 3em;
+      padding-left: 3em;
+      min-height: initial;
+      width: 100%;
       text-align: center;
     }
+  }
+
+  &__heading {
+    display: inline-block;
+    margin: 0 0 0.3em 0;
+    width: 100%;
+    text-shadow: 2px 2px 0 $fontShadowColorDark;
+    font-weight: 400;
+    font-size: rem(60px);
+    font-family: $fontStackHeading;
+    line-height: 1.2em;
+
+    @include media(tabletH) {
+      font-size: rem(40px);
+    }
+    @include media(mobileH) {
+      font-size: rem(26px);
+    }
+  }
+
+  &__paragraph {
+    margin: 0;
   }
 }

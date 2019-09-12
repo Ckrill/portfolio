@@ -1,31 +1,23 @@
 .resume {
-  article.page {
-    @include media(tabletH) {
-      display: block;
-    }
-  }
-  .textbox.w50 {
-    @include media(tabletH) {
-      width: 100%;
-      min-height: auto; /* I am not sure why this is necessarily, need to find another fix */
-    }
-  }
-  .textbox.left {
-    order: 0;
-    display: flex;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+
+  @include media(tabletH) {
     flex-direction: column;
-    justify-content: center;
-    align-items: left;
   }
-  .textbox.right.profileImg {
-    // background: url(../img/profile.jpg) no-repeat 80% 40% / cover;
-    padding: 0;
+
+  &__picture {
+    position: relative;
     order: 1;
+    width: 50%;
 
     @include media(tabletH) {
-      height: 30em;
+      order: 0;
       min-height: auto;
       max-height: 60vh;
+      width: 100%;
+      height: 30em;
     }
     @include media(mobileH) {
       height: 20em;
@@ -33,60 +25,30 @@
     @include media(mobileV) {
       height: 15em;
     }
-
-    img {
-      height: 100%;
-      width: 100%;
-      display: block;
-      object-fit: cover;
-      object-position: 80% 40%;
-    }
   }
-}
 
-.hidden {
-  opacity: 0;
-}
-
-.list {
-  margin-bottom: 0;
-
-  &__item {
+  &__image {
     display: block;
+    width: 100%;
+    height: 100%;
 
-    &--low-priority {
-      display: none;
-      transition: opacity $fast $curve;
-    }
+    object-fit: cover;
+    object-position: 80% 40%;
   }
 
-  &--show-all {
-    & + .toggle-list-items::before {
-      transform: rotate(45deg);
-    }
-    & + .toggle-list-items::after {
-      content: "less";
-    }
-    .list__item--low-priority {
-      display: block;
-    }
-  }
-}
+  &__text {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    order: 0;
+    width: 50%;
 
-.toggle-list-items {
-  cursor: pointer;
-  font-size: 0.75em;
-  font-weight: 500;
-  padding: 10px 10px 10px 0;
-  display: inline-block;
-
-  &::before {
-    content: "+";
-    display: inline-block;
-    margin-right: 4px;
-  }
-
-  &::after {
-    content: "more";
+    @include media(tabletH) {
+      order: 1;
+      min-height: auto;
+      width: 100%;
+    }
   }
 }

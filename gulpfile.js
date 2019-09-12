@@ -1,8 +1,5 @@
 "use strict";
 
-// TODOS
-// TODO: Sorting Scss properties.
-
 // INCLUDES
 
 const { src, dest, watch, series, parallel } = require("gulp");
@@ -33,7 +30,12 @@ exports.clean.description = "Delete dist/ folder";
 // Minify markup and place in ./dist/
 const markup = () =>
   src(paths.markup.src)
-    .pipe(gulpif(!devBuild, htmlmin({ collapseWhitespace: true })))
+    .pipe(
+      gulpif(
+        !devBuild,
+        htmlmin({ collapseWhitespace: true, removeComments: true })
+      )
+    )
     .pipe(dest(paths.markup.dest));
 
 // Styles

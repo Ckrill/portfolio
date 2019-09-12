@@ -1,0 +1,7 @@
+.textbox {
+  padding: 5em;
+
+  @include media(tabletV) {
+    padding: 3em;
+  }
+}
