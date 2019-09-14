@@ -13,6 +13,10 @@ sass.compiler = require("node-sass");
 const autoprefixer = require("gulp-autoprefixer");
 const cleanCSS = require("gulp-clean-css");
 const uglify = require("gulp-uglify");
+const browserify = require("browserify");
+const source = require("vinyl-source-stream");
+const buffer = require("vinyl-buffer");
+// vinyl-transform could be used instead of vinyl-source-stream and vinyl-buffer but it has a dependency vulnerability
 
 // Paths
 const { paths, devBuild } = require("./package.json");
@@ -52,7 +56,10 @@ const styles = () =>
 // Scripts
 // Minify scripts and place in ./dist/js
 const scripts = () =>
-  src(paths.scripts.src)
+  browserify("./src/js/script.js")
+    .bundle()
+    .pipe(source("script.js"))
+    .pipe(buffer())
     .pipe(gulpif(!devBuild, uglify()))
     .pipe(gulpif(!devBuild, rename({ extname: ".min.js" })))
     .pipe(dest(paths.scripts.dest));
