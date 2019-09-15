@@ -12,8 +12,6 @@
   }
 
   &__item {
-    display: inline-block;
-    display: block;
     padding: 0.4em 0;
 
     &--low-priority {
@@ -27,7 +25,7 @@
       transform: rotate(45deg);
     }
     & + .toggle-list-items::after {
-      content: "less";
+      content: 'less';
     }
     .list__item--low-priority {
       display: block;
@@ -45,11 +43,11 @@
   &::before {
     display: inline-block;
     margin-right: 4px;
-    content: "+";
+    content: '+';
   }
 
   &::after {
-    content: "more";
+    content: 'more';
   }
 }
 
