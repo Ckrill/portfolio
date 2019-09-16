@@ -1,3 +1,5 @@
+'use strict';
+
 var f = require('./helper/functions');
 var list = require('./modules/list');
 
