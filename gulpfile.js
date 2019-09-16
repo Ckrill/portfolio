@@ -37,7 +37,13 @@ const markup = () =>
     .pipe(
       gulpif(
         !devBuild,
-        htmlmin({ collapseWhitespace: true, removeComments: true })
+        htmlmin({
+          collapseWhitespace: true,
+          removeComments: true,
+          removeEmptyAttributes: true,
+          sortAttributes: true,
+          sortClassName: true
+        })
       )
     )
     .pipe(dest(paths.markup.dest));
