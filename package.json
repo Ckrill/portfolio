@@ -37,7 +37,8 @@
     "assets": {
       "src": [
         "./src/font/*.*",
-        "./src/img/**/*.*"
+        "./src/img/**/*.*",
+        "./src/js/libraries/**/*.*"
       ],
       "dest": "./dist"
     }
