@@ -62,7 +62,7 @@ const styles = () =>
 // Scripts
 // Minify scripts and place in ./dist/js
 const scripts = () =>
-  browserify('./src/js/script.js')
+  browserify('./src/js/script.js', { debug: devBuild })
     .bundle()
     .pipe(source('script.js'))
     .pipe(buffer())
