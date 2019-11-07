@@ -43,6 +43,7 @@ strong {
   position: relative;
   color: inherit;
   text-decoration: none;
+  white-space: nowrap;
   font-weight: 400;
 
   &:after {
@@ -51,7 +52,7 @@ strong {
     left: 0;
     width: 100%;
     border-bottom: 1px solid $fontColor;
-    content: "";
+    content: '';
     transition: transform $fast $curve;
     transform: scaleX(0);
     transform-origin: 0;

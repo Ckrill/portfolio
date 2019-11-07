@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/Ckrill/portfolio#readme",
   "description": "Personal portfolio",
-  "devBuild": true,
+  "devBuild": false,
   "paths": {
     "generic": {
       "src": "./src",
