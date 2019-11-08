@@ -14,42 +14,42 @@
   &__item {
     padding: 0.4em 0;
 
-    &--low-priority {
-      display: none;
-      transition: opacity $fast $curve;
-    }
+    // &--low-priority {
+    //   display: none;
+    //   transition: opacity $fast $curve;
+    // }
   }
 
-  &--show-all {
-    & + .toggle-list-items::before {
-      transform: rotate(45deg);
-    }
-    & + .toggle-list-items::after {
-      content: 'less';
-    }
-    .list__item--low-priority {
-      display: block;
-    }
-  }
+  // &--show-all {
+  //   & + .toggle-list-items::before {
+  //     transform: rotate(45deg);
+  //   }
+  //   & + .toggle-list-items::after {
+  //     content: 'less';
+  //   }
+  //   .list__item--low-priority {
+  //     display: block;
+  //   }
+  // }
 }
 
-.toggle-list-items {
-  display: inline-block;
-  padding: 10px 10px 10px 0;
-  font-weight: 500;
-  font-size: 0.75em;
-  cursor: pointer;
+// .toggle-list-items {
+//   display: inline-block;
+//   padding: 10px 10px 10px 0;
+//   font-weight: 500;
+//   font-size: 0.75em;
+//   cursor: pointer;
 
-  &::before {
-    display: inline-block;
-    margin-right: 4px;
-    content: '+';
-  }
+//   &::before {
+//     display: inline-block;
+//     margin-right: 4px;
+//     content: '+';
+//   }
 
-  &::after {
-    content: 'more';
-  }
-}
+//   &::after {
+//     content: 'more';
+//   }
+// }
 
 .hidden {
   opacity: 0;
