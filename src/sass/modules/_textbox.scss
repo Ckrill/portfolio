@@ -1,7 +1,10 @@
 .textbox {
   padding: 5em;
 
-  @include media(tabletV) {
+  @include media(tabletH) {
+    font-size: rem(14px);
+  }
+  @include media(mobileH) {
     padding: 3em;
   }
 }

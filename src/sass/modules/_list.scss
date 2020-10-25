@@ -7,9 +7,6 @@
   @include media(tabletH) {
     font-size: rem(14px);
   }
-  @include media(mobileH) {
-    font-size: rem(12px);
-  }
 
   &__item {
     padding: 0.4em 0;

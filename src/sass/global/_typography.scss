@@ -1,4 +1,10 @@
-html,
+html {
+  scroll-snap-type: y mandatory;
+  @include media(mobileH) {
+    scroll-snap-type: none;
+  }
+}
+
 body {
   margin: 0;
   background: $BgColor none no-repeat left top;
@@ -23,12 +29,32 @@ body {
   text-shadow: 2px 2px 0 $fontShadowColorDark;
   font-size: rem(60px);
   line-height: 1.2em;
+
+  @include media(laptopH) {
+    font-size: rem(50px);
+  }
+  @include media(tabletH) {
+    font-size: rem(40px);
+  }
+  @include media(mobileH) {
+    font-size: rem(26px);
+  }
 }
 
 .subheading {
   text-shadow: 1px 1px 0 $fontShadowColorDark;
   font-size: rem(40px);
   line-height: 1.2em;
+
+  @include media(laptopH) {
+    font-size: rem(30px);
+  }
+  @include media(tabletH) {
+    font-size: rem(26px);
+  }
+  @include media(mobileH) {
+    font-size: rem(18px);
+  }
 }
 
 p {
@@ -60,25 +86,5 @@ strong {
 
   &:hover:after {
     transform: scaleX(1);
-  }
-}
-
-@include media(tabletH) {
-  .heading {
-    font-size: rem(40px);
-  }
-
-  .subheading {
-    font-size: rem(26px);
-  }
-}
-
-@include media(mobileH) {
-  .heading {
-    font-size: rem(26px);
-  }
-
-  .subheading {
-    font-size: rem(18px);
   }
 }

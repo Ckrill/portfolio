@@ -3,6 +3,8 @@
   min-height: 100vh;
   width: 100%;
 
+  scroll-snap-align: start;
+
   &__text {
     position: relative;
     display: flex;
@@ -12,12 +14,11 @@
     max-width: 700px;
     width: 50%;
 
-    @include media(tabletH) {
-      // align-items: flex-start;
-      // justify-content: flex-start;
-      padding-bottom: 20vh;
-      min-height: auto; /* TODO: I am not sure why this is necessarily, need to find another fix */
+    @include media(tabletV) {
       width: 100%;
+    }
+    @include media(mobileH) {
+      padding-bottom: 20vh;
     }
   }
 }

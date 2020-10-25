@@ -7,6 +7,11 @@
 //-------------------------------------------
 
 @mixin media($point) {
+  @if $point == laptopH {
+    @media screen and (max-width: 1280px) {
+      @content;
+    }
+  }
   @if $point == tabletH {
     @media screen and (max-width: 1024px) {
       @content;
