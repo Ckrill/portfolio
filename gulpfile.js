@@ -57,7 +57,7 @@ const styles = () =>
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(gulpif(!devBuild, cleanCSS()))
-    .pipe(gulpif(!devBuild, rename({ extname: '.min.css' })))
+    .pipe(rename({ extname: '.min.css' }))
     .pipe(sourcemaps.write('.'))
     .pipe(dest(paths.styles.dest))
     .pipe(browserSync.stream());
@@ -71,7 +71,7 @@ const scripts = () =>
     .pipe(buffer())
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(gulpif(!devBuild, uglify()))
-    .pipe(gulpif(!devBuild, rename({ extname: '.min.js' })))
+    .pipe(rename({ extname: '.min.js' }))
     .pipe(sourcemaps.write('.'))
     .pipe(dest(paths.scripts.dest));
 
