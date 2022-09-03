@@ -1,69 +1,27 @@
 {
   "name": "portfolio",
+  "description": "Personal portfolio",
   "version": "0.1.0",
-  "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "private": true,
+  "author": "Chris",
+  "license": "ISC",
+  "homepage": "https://github.com/Ckrill/portfolio#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ckrill/portfolio.git"
   },
-  "author": "Chris",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/Ckrill/portfolio/issues"
   },
-  "homepage": "https://github.com/Ckrill/portfolio#readme",
-  "description": "Personal portfolio",
-  "devBuild": false,
-  "paths": {
-    "generic": {
-      "src": "./src",
-      "dest": "./dist"
-    },
-    "markup": {
-      "src": "./src/*.html",
-      "dest": "./dist"
-    },
-    "styles": {
-      "src": "./src/sass/**/*.scss",
-      "dest": "./dist/css"
-    },
-    "scripts": {
-      "src": "./src/js/**/*.js",
-      "dest": "./dist/js"
-    },
-    "assets": {
-      "src": [
-        "./src/font/*.*",
-        "./src/img/**/*.*",
-        "./src/js/libraries/**/*.*"
-      ],
-      "dest": "./dist"
-    }
+  "type": "module",
+  "packageManager": "yarn@3.2.3",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "browser-sync": "^2.27.7",
-    "browserify": "^17.0.0",
-    "del": "^6.0.0",
-    "eslint": "^7.32.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.2.0",
-    "eslint-plugin-standard": "^5.0.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-if": "^3.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-uglify": "^3.0.2",
-    "node-sass": "^7.0.1",
-    "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
+    "sass": "^1.54.8",
+    "vite": "^3.0.9"
   }
 }

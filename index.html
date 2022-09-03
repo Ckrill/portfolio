@@ -19,33 +19,33 @@
     />
     <meta property="og:image" content="https://chrisc.dk/img/profile.jpg" />
 
-    <script defer src="js/script.min.js"></script>
+    <script defer src="/src/js/main.js" type="module"></script>
 
-    <link rel="stylesheet" href="css/styles.min.css" type="text/css" />
+    <link rel="stylesheet" href="/src/sass/main.scss" type="text/css" />
 
     <link
       rel="preload"
-      href="font/oswald-regular.woff2"
+      href="/src/font/oswald-regular.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href="font/roboto-light.woff2"
+      href="/src/font/roboto-light.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href="font/roboto-regular.woff2"
+      href="/src/font/roboto-regular.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
 
-    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/src/img/favicon.ico" />
   </head>
 
   <body>
@@ -56,12 +56,12 @@
         <source
           type="image/webp"
           media="(min-width: 1440px)"
-          srcset="/img/profile.webp"
+          srcset="/src/img/profile.webp"
         />
-        <source type="image/webp" srcset="/img/profile-s.webp" />
+        <source type="image/webp" srcset="/src/img/profile-s.webp" />
         <img
           class="resume__image"
-          src="/img/profile.jpg"
+          src="/src/img/profile.jpg"
           alt="Profile picture"
         />
       </picture>
