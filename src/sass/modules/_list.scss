@@ -1,10 +1,12 @@
-.list {
-  margin-bottom: 0;
-  padding: 0;
-  list-style: none;
-  font-size: rem(16px);
+@use '../core' as *;
 
-  @include media(tabletH) {
+.list {
+  padding: 0;
+  margin-bottom: 0;
+  font-size: rem(16px);
+  list-style: none;
+
+  @include media(tablet-h) {
     font-size: rem(14px);
   }
 

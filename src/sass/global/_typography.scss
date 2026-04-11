@@ -1,64 +1,71 @@
+@use '../core' as *;
+
 html {
   scroll-snap-type: y mandatory;
-  @include media(mobileH) {
+
+  @include media(mobile-h) {
     scroll-snap-type: none;
   }
 }
 
 body {
   margin: 0;
-  background: $BgColor none no-repeat left top;
-  color: $fontColor;
-  text-shadow: 1px 1px 0 $fontShadowColorLight;
-  font-weight: 300;
+  font-family: $font-stack;
   font-size: 100%;
-  font-family: $fontStack;
+  font-weight: 300;
   line-height: 1.5;
+  color: $font-color;
+  text-shadow: 1px 1px 0 $font-shadow-color-light;
+  background: $bg-color none no-repeat left top;
 }
 
 .heading,
 .subheading {
   display: inline-block;
-  margin: 0 0 0.5em 0;
   width: 100%;
+  margin: 0 0 0.5em;
+  font-family: $font-stack-heading;
   font-weight: 400;
-  font-family: $fontStackHeading;
 }
 
 .heading {
-  text-shadow: 2px 2px 0 $fontShadowColorDark;
   font-size: rem(60px);
   line-height: 1.2em;
+  text-shadow: 2px 2px 0 $font-shadow-color-dark;
 
   @include media(laptopH) {
     font-size: rem(50px);
   }
-  @include media(tabletH) {
+
+  @include media(tablet-h) {
     font-size: rem(40px);
   }
-  @include media(mobileH) {
+
+  @include media(mobile-h) {
     font-size: rem(26px);
   }
 }
 
 .subheading {
-  text-shadow: 1px 1px 0 $fontShadowColorDark;
   font-size: rem(40px);
   line-height: 1.2em;
+  text-shadow: 1px 1px 0 $font-shadow-color-dark;
 
   @include media(laptopH) {
     font-size: rem(30px);
   }
-  @include media(tabletH) {
+
+  @include media(tablet-h) {
     font-size: rem(26px);
   }
-  @include media(mobileH) {
+
+  @include media(mobile-h) {
     font-size: rem(18px);
   }
 }
 
 p {
-  margin: 0 0 1em 0;
+  margin: 0 0 1em;
 }
 
 strong {
@@ -67,24 +74,24 @@ strong {
 
 .link {
   position: relative;
-  color: inherit;
-  text-decoration: none;
-  white-space: nowrap;
   font-weight: 400;
+  color: inherit;
+  white-space: nowrap;
+  text-decoration: none;
 
-  &:after {
+  &::after {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    border-bottom: 1px solid $fontColor;
     content: '';
-    transition: transform $fast $curve;
+    border-bottom: 1px solid $font-color;
     transform: scaleX(0);
     transform-origin: 0;
+    transition: transform $fast $curve;
   }
 
-  &:hover:after {
+  &:hover::after {
     transform: scaleX(1);
   }
 }

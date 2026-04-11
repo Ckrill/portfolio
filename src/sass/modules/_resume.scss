@@ -1,10 +1,12 @@
+@use '../core' as *;
+
 .resume {
   display: flex;
-  min-height: 100vh;
   width: 100%;
-
+  min-height: 100vh;
   scroll-snap-align: start;
-  @include media(tabletV) {
+
+  @include media(tablet-v) {
     flex-direction: column;
   }
 
@@ -15,18 +17,20 @@
     width: 50%;
     height: 100%;
 
-    @include media(tabletV) {
+    @include media(tablet-v) {
       position: relative;
       order: 0;
-      min-height: auto;
-      max-height: 60vh;
       width: 100%;
       height: 30em;
+      min-height: auto;
+      max-height: 60vh;
     }
-    @include media(mobileH) {
+
+    @include media(mobile-h) {
       height: 20em;
     }
-    @include media(mobileV) {
+
+    @include media(mobile-v) {
       height: 15em;
     }
   }
@@ -35,7 +39,6 @@
     display: block;
     width: 100%;
     height: 100%;
-
     object-fit: cover;
     object-position: 80% 40%;
   }
@@ -43,16 +46,16 @@
   &__text {
     position: relative;
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
     order: 0;
     width: 50%;
 
-    @include media(tabletV) {
+    @include media(tablet-v) {
       order: 1;
-      min-height: auto;
       width: 100%;
+      min-height: auto;
     }
   }
 }

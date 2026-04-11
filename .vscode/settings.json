@@ -3,5 +3,13 @@
     "titleBar.activeForeground": "#424242",
     "titleBar.activeBackground": "#f5f5f5"
   },
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+
+  // Stylelint settings
+  "stylelint.validate": ["css", "scss"],
+  "css.validate": false,
+  "scss.validate": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "explicit"
+  }
 }

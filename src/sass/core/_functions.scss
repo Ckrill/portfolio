@@ -1,8 +1,12 @@
+@use 'variables' as *;
+
 // Functions
 @function rem($size) {
-  $remSize: calc($size / $base-font-size);
-  @return #{$remSize}rem;
+  $rem-size: calc($size / $base-font-size);
+
+  @return #{$rem-size}rem;
 }
+
 // Ex.
 // p {
 //   font-size: rem(23px);

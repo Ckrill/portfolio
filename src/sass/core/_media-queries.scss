@@ -1,41 +1,43 @@
 // Media queries
-//-------------------------------------------
+// -------------------------------------------
 // Example
 // body {
 //   @include media(mobile) { background: red;}
 // }
-//-------------------------------------------
+// -------------------------------------------
 
 @mixin media($point) {
   @if $point == laptopH {
-    @media screen and (max-width: 1280px) {
+    @media screen and (width <= 1280px) {
       @content;
     }
   }
-  @if $point == tabletH {
-    @media screen and (max-width: 1024px) {
+
+  @if $point == tablet-h {
+    @media screen and (width <= 1024px) {
       @content;
     }
   }
-  @if $point == tabletV {
-    @media screen and (max-width: 768px) {
+
+  @if $point == tablet-v {
+    @media screen and (width <= 768px) {
       @content;
     }
-  } @else if $point == mobileH {
-    @media screen and (max-width: 568px) {
+  } @else if $point == mobile-h {
+    @media screen and (width <= 568px) {
       @content;
     }
-  } @else if $point == mobileV {
-    @media screen and (max-width: 400px) {
+  } @else if $point == mobile-v {
+    @media screen and (width <= 400px) {
       @content;
     }
   }
 }
 
-//html, body {
+// html, body {
 //   @include media(desktop) { background: orange !important; }
-//   @include media(tabletH) { background: #000 !important; }
-//   @include media(tabletV) { background: red !important; }
-//   @include media(mobileH) { background: yellow !important; }
-//   @include media(mobileV) { background: purple !important; }
+//   @include media(tablet-h) { background: #000 !important; }
+//   @include media(tablet-v) { background: red !important; }
+//   @include media(mobile-h) { background: yellow !important; }
+//   @include media(mobile-v) { background: purple !important; }
 // }

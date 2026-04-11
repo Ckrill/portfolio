@@ -1,10 +1,13 @@
+@use '../core' as *;
+
 .textbox {
   padding: 5em;
 
-  @include media(tabletH) {
+  @include media(tablet-h) {
     font-size: rem(14px);
   }
-  @include media(mobileH) {
+
+  @include media(mobile-h) {
     padding: 3em;
   }
 }
