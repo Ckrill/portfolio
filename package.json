@@ -23,7 +23,7 @@
     "lint:fix": "stylelint \"src/sass/**/*.scss\" --fix"
   },
   "devDependencies": {
-    "postcss": "^8.5.9",
+    "postcss": "^8.5.10",
     "rollup-plugin-visualizer": "^7.0.1",
     "sass-embedded": "^1.99.0",
     "stylelint": "^17.6.0",
